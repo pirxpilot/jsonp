@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSONP API example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="build/build.js"></script>
+  </head>
+  <body>
+    <ul id='reviews'/>
+    <script>
+      var jsonp = require('jsonp');
+      var el = document.getElementById('reviews');
+      jsonp('http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp')
+        .query({
+          'api-key': '887a8ea540f1b1c44a32584e84ee9383:9:64325990',
+          query: 'lincoln',
+          'critics-pick': 'Y'
+        })
+        .end(function(data) {
+          console.log(data);
+          el.innerHTML = data.results.map(function(movie) {
+            return '<li>' + movie.display_title + '</li>'
+          }).join('');
+        });
+    </script>
+  </body>
+</html>
