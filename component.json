@@ -1,0 +1,13 @@
+{
+  "name": "jsonp",
+  "repo": "code42day/jsonp",
+  "description": "Subset of superagent API to be used with jsonp requests",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
