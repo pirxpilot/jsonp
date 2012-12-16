@@ -3,7 +3,10 @@
   "repo": "code42day/jsonp",
   "description": "Subset of superagent API to be used with jsonp requests",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": [
+    "ajax",
+    "jsonp"
+  ],
   "dependencies": {},
   "development": {},
   "license": "MIT",
