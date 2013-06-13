@@ -17,6 +17,7 @@ function prepareUrl(url, params) {
 module.exports = function jsonp(url, fn) {
   var self, my = {
     url: url,
+    callback_param: 'callback',
     query: {}
   };
 
@@ -24,6 +25,13 @@ module.exports = function jsonp(url, fn) {
     Object.keys(q).forEach(function(key) {
       my.query[key] = q[key];
     });
+    return self;
+  }
+
+  // change options
+  function options(opts) {
+    if(opts.callback_name)
+      my.callback_param = opts.callback_param;
     return self;
   }
 
@@ -38,7 +46,7 @@ module.exports = function jsonp(url, fn) {
       fn(json);
     };
 
-    my.query.callback = fnName;
+    my.query[my.callback_param] = fnName;
     js = document.createElement('script');
     js.src = prepareUrl(my.url, my.query);
     js.async = true;
@@ -52,6 +60,7 @@ module.exports = function jsonp(url, fn) {
 
   self = {
     query: query,
+    options: options,
     end: end
   };
 
