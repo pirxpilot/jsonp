@@ -30,7 +30,7 @@ module.exports = function jsonp(url, fn) {
 
   // change options
   function options(opts) {
-    if(opts.callback_name)
+    if(opts.callback_param)
       my.callback_param = opts.callback_param;
     return self;
   }
