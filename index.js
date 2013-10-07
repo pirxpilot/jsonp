@@ -1,4 +1,7 @@
 // unique callback number
+
+_ = require('lodash');
+
 var callbackId = 0;
 
 function getCallbackName() {
@@ -7,8 +10,7 @@ function getCallbackName() {
 }
 
 function prepareUrl(url, params) {
-  return url + '?' + Object.keys(params)
-    .map(function(key) {
+  return url + '?' + _.map(_.keys(params), function(key) {
       return key + '=' + encodeURIComponent(params[key]);
     })
     .join('&');
@@ -22,7 +24,7 @@ module.exports = function jsonp(url, fn) {
   };
 
   function query(q) {
-    Object.keys(q).forEach(function(key) {
+    _(_.keys(q)).forEach(function(key) {
       my.query[key] = q[key];
     });
     return self;
@@ -40,7 +42,7 @@ module.exports = function jsonp(url, fn) {
 
     window[fnName] = function(json) {
       // cleanup after the call
-      delete window[fnName];
+      window[fnName] = undefined;
       js.parentNode.removeChild(js);
       // execute provided callback
       fn(json);

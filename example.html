@@ -8,6 +8,7 @@
   <body>
     <ul id='reviews'/>
     <script>
+      var _ = require('lodash');
       var jsonp = require('jsonp');
       var el = document.getElementById('reviews');
       jsonp('http://api.nytimes.com/svc/movies/v2/reviews/search.jsonp')
@@ -18,7 +19,7 @@
         })
         .end(function(data) {
           console.log(data);
-          el.innerHTML = data.results.map(function(movie) {
+          el.innerHTML = _.map(data.results, function(movie) {
             return '<li>' + movie.display_title + '</li>'
           }).join('');
         });
