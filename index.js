@@ -1,3 +1,5 @@
+var load = require('load');
+
 // unique callback number
 var callbackId = 0;
 
@@ -28,7 +30,7 @@ module.exports = function jsonp(url, fn) {
   }
 
   function end(fn) {
-    var js, fjs, fnName = getCallbackName();
+    var js, fnName = getCallbackName();
 
     window[fnName] = function(json) {
       // cleanup after the call
@@ -39,11 +41,7 @@ module.exports = function jsonp(url, fn) {
     };
 
     my.query.callback = fnName;
-    js = document.createElement('script');
-    js.src = prepareUrl(my.url, my.query);
-    js.async = true;
-    fjs = document.getElementsByTagName('script')[0];
-    fjs.parentNode.insertBefore(js, fjs);
+    js = load(prepareUrl(my.url, my.query));
   }
 
   if (typeof fn === 'function') {
