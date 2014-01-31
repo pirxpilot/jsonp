@@ -9,11 +9,11 @@ function getCallbackName() {
 }
 
 function prepareUrl(url, params) {
-  return url + '?' + Object.keys(params)
-    .map(function(key) {
-      return key + '=' + encodeURIComponent(params[key]);
-    })
-    .join('&');
+  var query = [];
+  for (key in params) {
+    query.push(key + '=' + encodeURIComponent(params[key]));
+  }
+  return url + '?' + query.join('&');
 }
 
 module.exports = function jsonp(url, fn) {
@@ -23,9 +23,9 @@ module.exports = function jsonp(url, fn) {
   };
 
   function query(q) {
-    Object.keys(q).forEach(function(key) {
-      my.query[key] = q[key];
-    });
+    for (key in q) {
+      my.query[key] = q[key]
+    }
     return self;
   }
 
