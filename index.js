@@ -1,6 +1,6 @@
 // unique callback number
 
-_ = require('lodash');
+var _ = require('lodash');
 
 var callbackId = 0;
 
