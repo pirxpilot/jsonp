@@ -24,9 +24,10 @@ module.exports = function jsonp(url, fn) {
   };
 
   function query(q) {
-    _(_.keys(q)).forEach(function(key) {
+    var key;
+    for (key in q) {
       my.query[key] = q[key];
-    });
+    }
     return self;
   }
 
