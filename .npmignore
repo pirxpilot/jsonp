@@ -1,0 +1,9 @@
+.jshintrc
+build
+component.json
+components
+example.html
+History.md
+License.txt
+Makefile
+test
