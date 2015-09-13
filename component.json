@@ -3,7 +3,7 @@
   "repo": "code42day/jsonp",
   "demo": "http://code42day.github.io/jsonp",
   "description": "Subset of superagent API to be used with jsonp requests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "ajax",
     "jsonp"

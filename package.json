@@ -1,6 +1,6 @@
 {
   "name": "code42day-jsonp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Subset of superagent API to be used with jsonp requests",
   "scripts": {
     "test": "make check"
