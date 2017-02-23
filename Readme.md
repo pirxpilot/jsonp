@@ -5,7 +5,7 @@ Tiny subset of [superagent][]-like API to be used with [jsonp][] requests
 
 ## Installation
 
-    $ component install code42day/jsonp
+    $ npm install tiny-jsonp
 
 ## API
 

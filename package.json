@@ -1,5 +1,5 @@
 {
-  "name": "code42day-jsonp",
+  "name": "tiny-jsonp",
   "version": "1.0.1",
   "description": "Subset of superagent API to be used with jsonp requests",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code42day/jsonp.git"
+    "url": "https://github.com/pirxpilot/jsonp.git"
   },
   "keywords": [
     "browser",
@@ -20,9 +20,6 @@
   "browser": {
     "load": "code42day-load"
   },
-  "author": "Damian Krzeminski <pirxpilot@code42day.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/code42day/jsonp/issues"
-  }
+  "author": "Damian Krzeminski <pirxpilot@furkot.com>",
+  "license": "MIT"
 }
