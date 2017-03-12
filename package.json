@@ -1,6 +1,6 @@
 {
   "name": "tiny-jsonp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Subset of superagent API to be used with jsonp requests",
   "scripts": {
     "test": "make check"
