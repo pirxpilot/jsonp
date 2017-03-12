@@ -1,4 +1,9 @@
 
+1.0.3 / 2017-03-11
+==================
+
+ * replace deprecated code42day-load with dynload
+
 1.0.2 / 2017-02-22
 ==================
 
