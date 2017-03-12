@@ -1,4 +1,4 @@
-var load = require('load');
+var load = require('dynload');
 
 // unique callback number
 var callbackId = 0;

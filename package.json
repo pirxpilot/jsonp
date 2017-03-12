@@ -15,10 +15,7 @@
     "jsonp"
   ],
   "dependencies": {
-    "code42day-load": "^1.0.0"
-  },
-  "browser": {
-    "load": "code42day-load"
+    "dynload": "^1.0.2"
   },
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT"
