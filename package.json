@@ -18,5 +18,8 @@
     "dynload": "^1.0.2"
   },
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ]
 }
